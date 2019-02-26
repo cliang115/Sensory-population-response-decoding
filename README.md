@@ -25,3 +25,11 @@ To learn about the spike-triggering stimulus of H1 neuron from fly, I plotted th
 From the curve, we learn that this is a typical leaky integrate and fire neuron.
 
 Discussion and conclusion: The work presented here provides a way to decode the responses of neurons and find the stimulus. However, this simplified model is based on several assumptions and is not accurate enough to reveal the stimulus from the real world. First, we simplified the nervous system by using only four interneurons whose preferred direction are at 90 degrees and whose tuning curves are cosine curves. In the future, an optimal decoder constructed from higher order interneurons should be used to more accurately estimate the stimulus. Second, we use mean firing rate over 10s, so we cannot calculate stimulus in a short temporal interval. For future studies that deal with short temporal interval of sensory inputs, we should decode based on spike trains: each spike input causes an increment in the decoder output according to the preferred stimulus [1].  Overall, even though this proposed model is able to decode simple sensory neuron responses, much more complex work need to be performed to accurately model sensory neural circuitry in the reality.
+
+References
+1.	Chaisanguanthum and Lisberger, 2011 A neurally efficient implementation of sensory population decoding J. Neurosci., 31 (2011), pp. 4868–4877
+2.	Jazayeri and Movshon, 2006 Optimal representation of sensory information by neural populations Nat. Neurosci., 9 (2006), pp. 690–696
+3.	Jacobs G A, Miller J P and Aldworth Z 2008 Computational mechanisms of mechanosensory processing in the cricket J. Exp. Biol. 211 1819–28
+4.	Theunissen and Miller, 1991 Representation of Sensory Information in the Cricket Cereal Sensory System. II. Information Theoretic Calculation of System Accuracy and Optimal Tuning-Curve Widths of Four Primary Interneurons. J. Neurophysiol., 66 (1991), pp. 1690–1703
+
+
