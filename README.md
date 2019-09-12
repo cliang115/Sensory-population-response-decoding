@@ -15,8 +15,10 @@ Methods: I used matlab to randomly generate four arrays representing the firing 
 plt.plot(np.transpose(data['stim']), np.transpose(data['neuron1'])) 
 plt.plot(np.transpose(data['stim']), np.transpose(data['neuron2'])) 
 plt.plot(np.transpose(data['stim']), np.transpose(data['neuron3'])) 
-plt.plot(np.transpose(data['stim']), np.transpose(data['neuron4'])) 
+plt.plot(np.transpose(data['stim']), np.transpose(data['neuron4']))
+
 ![alt text][image1]
+
 To test if the neurons are Poisson, I plotted the mean-variance curve for each neuron with the following code to learn about the Fano factor:
 plt.plot(np.mean(data['neuron']*10, axis = 0), np.var(data['neuron']*10, axis = 0))
 To model spike generation of each neuron, I will need the spike trains of each neuron and a series of stimuli that generate the spike trains. For this part, I used data from the H1 neuron of the fly from the lab of Dr Robert de Ruyter van Steveninck. I calculated the spike-triggered average by computing the average stimulus 300ms preceding a spike with the code in ‘spike triggered average’.
