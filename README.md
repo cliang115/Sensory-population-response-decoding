@@ -23,12 +23,18 @@ To model spike generation of each neuron, I will need the spike trains of each n
 
 Results: For an unknown stimulus, the four neurons will generate responses r1, r2, r3 and r4. I calculated the population vector for these neurons: Each neuron adds in a component in its preferred direction, with a weight given by its firing rate divided by its maximum average firing rate, which approximates the projection of the wind direction, onto that preferred direction. Because of the preferred directions of these neurons are at 90 degrees to each other, only two neurons will fire for a single stimulus. Thus, we can compute the direction using the formula below:
 np.degrees(np.arctan(np.mean(data1['r2'])/ max(np.mean(data['neuron1'], axis = 0))/np.mean(data1['r1'])*a1)* max(np.mean(data['neuron2'], axis = 0)))
+
 ![alt text][image2] 
+
 To determine if the neurons are Poisson, I plotted the mean-variance curve for each of the neuron:
-![alt text][image3] 
+
+![alt text][image3]
+
 Three of the neurons have a Fano factor of 1. So these three are Poisson, while the other one is not.
 To learn about the spike-triggering stimulus of H1 neuron from fly, I plotted the following curve:
-![alt text][image4] 
+
+![alt text][image4]
+
 From the curve, we learn that this is a typical leaky integrate and fire neuron.
 
 Discussion and conclusion: The work presented here provides a way to decode the responses of neurons and find the stimulus. However, this simplified model is based on several assumptions and is not accurate enough to reveal the stimulus from the real world. First, we simplified the nervous system by using only four interneurons whose preferred direction are at 90 degrees and whose tuning curves are cosine curves. In the future, an optimal decoder constructed from higher order interneurons should be used to more accurately estimate the stimulus. Second, we use mean firing rate over 10s, so we cannot calculate stimulus in a short temporal interval. For future studies that deal with short temporal interval of sensory inputs, we should decode based on spike trains: each spike input causes an increment in the decoder output according to the preferred stimulus [1].  Overall, even though this proposed model is able to decode simple sensory neuron responses, much more complex work need to be performed to accurately model sensory neural circuitry in the reality.
