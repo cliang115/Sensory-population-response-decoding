@@ -13,9 +13,12 @@ Related work: This work is built on an existing model from Theunissen and Miller
 
 Methods: I used matlab to randomly generate four arrays representing the firing rate of each neuron, and store them in the file ‘tuning.mat’. Each neuron is stimulated by wind from all directions and each recordings last 10s. Each column of the array represents the firing rate of the neuron in response to each of the stimuli. The rows of the arrays represent 100 trials. Then I plot the tuning curves with the following code.
 
-plt.plot(np.transpose(data['stim']), np.transpose(data['neuron1'])) 
-plt.plot(np.transpose(data['stim']), np.transpose(data['neuron2'])) 
-plt.plot(np.transpose(data['stim']), np.transpose(data['neuron3'])) 
+plt.plot(np.transpose(data['stim']), np.transpose(data['neuron1']))
+
+plt.plot(np.transpose(data['stim']), np.transpose(data['neuron2']))
+
+plt.plot(np.transpose(data['stim']), np.transpose(data['neuron3']))
+
 plt.plot(np.transpose(data['stim']), np.transpose(data['neuron4']))
 
 ![alt text][image1]
