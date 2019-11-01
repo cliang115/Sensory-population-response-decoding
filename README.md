@@ -9,7 +9,7 @@
 
 Introduction: In the nervous system, information about a sensory stimulus or an impending movement is represented by the profile of activity across a population of neurons. Neurons tend to be tuned for specific properties of a stimulus or movement, responding most for a preferred stimulus or movement and less in relation to how much the stimulus or movement differs from the preferred one. [1] To guide behavior, the brain must correctly decode this population response and extract the sensory information as reliably as possible [2]. Here we ask how we can learn what the stimulus is by looking at the neural responses of a population of neurons and identify the mathematical operation each neuron computes.
 
-Related work: This work is built on an existing model from Theunissen and Miller’s paper in 1991 [4]. The four “low-velocity” interneurons of the cricket had sensitivity to stimuli spanning the entire 360 degree range of possible directions in the horizontal plane. The stimulus-response curve of each cell had a characteristic “tuning-curve” shape: the response was maximal for a particular air-current stimulus direction, and the response decreased as the stimulus was rotated from this optimal directions. The tuning curves of these four cells were equally spaced in angular separation. The goal of this work is to use this model to calculate the direction of the air-current stimuli and learn about the properties of each cell based on their responses. 
+Related work: This work is built on an existing model from Theunissen and Miller’s paper in 1991 [3, 4]. The four “low-velocity” interneurons of the cricket had sensitivity to stimuli spanning the entire 360 degree range of possible directions in the horizontal plane. The stimulus-response curve of each cell had a characteristic “tuning-curve” shape: the response was maximal for a particular air-current stimulus direction, and the response decreased as the stimulus was rotated from this optimal directions. The tuning curves of these four cells were equally spaced in angular separation. The goal of this work is to use this model to calculate the direction of the air-current stimuli and learn about the properties of each cell based on their responses. 
 
 Methods: I used matlab to randomly generate four arrays representing the firing rate of each neuron, and store them in the file ‘tuning.mat’. Each neuron is stimulated by wind from all directions and each recordings last 10s. Each column of the array represents the firing rate of the neuron in response to each of the stimuli. The rows of the arrays represent 100 trials. Then I plot the tuning curves with the following code.
 
@@ -48,7 +48,8 @@ Discussion and conclusion: The work presented here provides a way to decode the 
 References
 1.	Chaisanguanthum and Lisberger, 2011 A neurally efficient implementation of sensory population decoding J. Neurosci., 31 (2011), pp. 4868–4877
 2.	Jazayeri and Movshon, 2006 Optimal representation of sensory information by neural populations Nat. Neurosci., 9 (2006), pp. 690–696
-3.	Jacobs G A, Miller J P and Aldworth Z 2008 Computational mechanisms of mechanosensory processing in the cricket J. Exp. Biol. 211 1819–28
-4.	Theunissen and Miller, 1991 Representation of Sensory Information in the Cricket Cereal Sensory System. II. Information Theoretic Calculation of System Accuracy and Optimal Tuning-Curve Widths of Four Primary Interneurons. J. Neurophysiol., 66 (1991), pp. 1690–1703
+3. Theunissen and Miller, 1991 Representation of Sensory Information in the Cricket Cereal Sensory System. II. Information Theoretic Calculation of System Accuracy and Optimal Tuning-Curve Widths of Four Primary Interneurons. J. Neurophysiol., 66 (1991), pp. 1690–1703
+4.	Jacobs G A, Miller J P and Aldworth Z 2008 Computational mechanisms of mechanosensory processing in the cricket J. Exp. Biol. 211 1819–28
+	
 
 
