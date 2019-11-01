@@ -12,6 +12,7 @@ Introduction: In the nervous system, information about a sensory stimulus or an 
 Related work: This work is built on an existing model from Theunissen and Miller’s paper in 1991 [4]. The four “low-velocity” interneurons of the cricket had sensitivity to stimuli spanning the entire 360 degree range of possible directions in the horizontal plane. The stimulus-response curve of each cell had a characteristic “tuning-curve” shape: the response was maximal for a particular air-current stimulus direction, and the response decreased as the stimulus was rotated from this optimal directions. The tuning curves of these four cells were equally spaced in angular separation. The goal of this work is to use this model to calculate the direction of the air-current stimuli and learn about the properties of each cell based on their responses. 
 
 Methods: I used matlab to randomly generate four arrays representing the firing rate of each neuron, and store them in the file ‘tuning.mat’. Each neuron is stimulated by wind from all directions and each recordings last 10s. Each column of the array represents the firing rate of the neuron in response to each of the stimuli. The rows of the arrays represent 100 trials. Then I plot the tuning curves with the following code.
+
 plt.plot(np.transpose(data['stim']), np.transpose(data['neuron1'])) 
 plt.plot(np.transpose(data['stim']), np.transpose(data['neuron2'])) 
 plt.plot(np.transpose(data['stim']), np.transpose(data['neuron3'])) 
